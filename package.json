@@ -1,0 +1,19 @@
+{
+  "name": "web-script",
+  "version": "1.0.0",
+  "description": "for tampermonkey script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KngZhi/web-script.git"
+  },
+  "author": "KNG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KngZhi/web-script/issues"
+  },
+  "homepage": "https://github.com/KngZhi/web-script#readme"
+}
