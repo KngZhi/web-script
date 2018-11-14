@@ -9,6 +9,7 @@
 // @match        https://top.zhan.com/toefl/read/single-feedback.html*
 // ==/UserScript==
 
+document.head.insertAdjacentHTML('afterbegin', '<link rel="stylesheet" href="https://cdn.bootcss.com/Primer/11.0.0-rc.5/build.css">')
 
 const data = JSON.parse(document.getElementById('configread').innerText).reading
 
@@ -21,11 +22,11 @@ const result = JSON.stringify(
     2
 )
 
-const btn = document.createElement('button')
-btn.innerText = 'Copy Error to Clipboard'
-btn.setAttribute('data-clipboard-text', result)
-btn.setAttribute('class', 'btn')
+const btn = `
+<button class="btn tooltipped tooltipped-s" aria-label="Copied"data-clipboard-text="${result}" style="width: unset;line-height: unset; height: unset;">
+  Copy Error Data To Clipboard
+</button>
+`
+document.querySelector('h3').insertAdjacentHTML('beforebegin', btn)
 
 new ClipboardJS('.btn');
-
-document.querySelector('h3').insertAdjacentElement('beforebegin', btn)
